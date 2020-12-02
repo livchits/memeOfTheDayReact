@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-import processMemesData from '../memes/processMemesData';
+import processMemesData from '../../memes/processMemesData';
 import './Meme.css';
 
 function Meme() {
