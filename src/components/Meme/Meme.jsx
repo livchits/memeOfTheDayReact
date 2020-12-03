@@ -22,12 +22,12 @@ function Meme() {
     getMemesData();
   }, []);
 
-  const { name, url } = actualMeme;
-
   return (
     <main className="container">
       <Title isRandomMeme={isRandomMeme} />
-      <MemeInfo imageUrl={url} name={name} />
+      {actualMeme && (
+        <MemeInfo imageUrl={actualMeme.url} name={actualMeme.name} />
+      )}
     </main>
   );
 }
