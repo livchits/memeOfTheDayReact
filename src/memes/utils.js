@@ -10,4 +10,9 @@ function byAscendingId(firstMeme, nextMeme) {
   return parseInt(firstMeme.id) - parseInt(nextMeme.id);
 }
 
-export { selectData, biggerThan, byAscendingId };
+function getMemeOfTheDay(memes) {
+  const todayDate = new Date().getDate();
+  return memes[todayDate - 1];
+}
+
+export { selectData, biggerThan, byAscendingId, getMemeOfTheDay };
