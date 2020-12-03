@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './MemeInfo.css';
 
 function MemeInfo({ name, url }) {
   return (
