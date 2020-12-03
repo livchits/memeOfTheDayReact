@@ -2,10 +2,10 @@ import * as React from 'react';
 
 function MemeInfo({ name, url }) {
   return (
-    <figure>
-      <img alt={name} src={url} />
-      <figcaption>
-        <div>{name}</div>
+    <figure className="image-container">
+      <img alt={name} className="meme" src={url} />
+      <figcaption className="meme-text-container">
+        <div className="meme-text">{name}</div>
       </figcaption>
     </figure>
   );
