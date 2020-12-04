@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import './MemeInfo.css';
 
 function MemeInfo({ name, imageUrl }) {
@@ -11,5 +12,10 @@ function MemeInfo({ name, imageUrl }) {
     </figure>
   );
 }
+
+MemeInfo.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+};
 
 export default MemeInfo;
