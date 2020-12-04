@@ -1,5 +1,6 @@
+import { selectData, biggerThan, byAscendingId } from '../utils';
+
 import { fetchMemes, ENDPOINT } from './api';
-import { selectData, biggerThan, byAscendingId } from './utils';
 
 async function processMemesData() {
   const memes = await fetchMemes(ENDPOINT);

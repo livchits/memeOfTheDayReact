@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import processMemesData from '../../memes/processMemesData';
 import MemeInfo from '../MemeInfo/MemeInfo';
 import Title from '../Title/Title';
-import { getMemeOfTheDay } from '../../memes/utils';
+import { getMemeOfTheDay } from '../../utils';
 import './Meme.css';
 
 function Meme() {
