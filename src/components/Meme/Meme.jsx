@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import processMemesData from '../../memes/processMemesData';
 import MemeInfo from '../MemeInfo/MemeInfo';
 import Title from '../Title/Title';
-import { getMemeOfTheDay } from '../../utils';
+import ChangeMemeButton from '../ChangeMemeButton/ChangeMemeButton';
+import { getMemeOfTheDay, getRandomMeme } from '../../utils';
 import './Meme.css';
 
 function Meme() {
@@ -22,12 +23,19 @@ function Meme() {
     getMemesData();
   }, []);
 
+  const changeMeme = () => {
+    const randomMeme = getRandomMeme(memesData);
+    setActualMeme(randomMeme);
+    setIsRandomMeme(true);
+  };
+
   return (
     <main className="container">
       <Title isRandomMeme={isRandomMeme} />
       {actualMeme && (
         <MemeInfo imageUrl={actualMeme.url} name={actualMeme.name} />
       )}
+      <ChangeMemeButton handleClick={changeMeme} />
     </main>
   );
 }
