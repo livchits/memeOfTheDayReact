@@ -15,4 +15,16 @@ function getMemeOfTheDay(memes) {
   return memes[todayDate - 1];
 }
 
-export { selectData, biggerThan, byAscendingId, getMemeOfTheDay };
+function getRandomMeme(memes) {
+  const randomIndex = Math.floor(Math.random() * memes.length);
+  const randomMeme = memes[randomIndex];
+  return randomMeme;
+}
+
+export {
+  selectData,
+  biggerThan,
+  byAscendingId,
+  getMemeOfTheDay,
+  getRandomMeme,
+};
