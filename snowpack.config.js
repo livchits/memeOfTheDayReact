@@ -15,6 +15,7 @@ module.exports = {
         watch: 'watch "$1" src',
       },
     ],
+    ['@snowpack/plugin-webpack'],
   ],
   install: [
     /* ... */
