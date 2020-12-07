@@ -60,6 +60,10 @@
   opacity: 1;
 }
 
+.glow-on-hover:focus:before {
+  opacity: 1;
+}
+
 .glow-on-hover:after {
   z-index: -1;
   content: '';
