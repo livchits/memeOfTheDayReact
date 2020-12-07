@@ -5,6 +5,10 @@ header {
   margin: 10px;
 }
 
+header:focus-within {
+  outline: 2px dashed red;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
