@@ -35,7 +35,9 @@ You can see the app in [Now](https://memeoftheday.now.sh/) or install it in any 
 
 1. Clone the repository:
 
-`git clone `
+```
+git clone
+```
 
 2. Install the dependecies:
 
@@ -52,7 +54,7 @@ The button styles were taken from [Kocsten](https://codepen.io/kocsten).
 
 ## TODO
 
-- [ ] Accessibility improvements
+- [x] Accessibility improvements
 - [ ] Add transitions between random memes
 - [ ] Manage errors from API
 - [ ] Show a loading component while getting memes
