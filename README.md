@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 ## Launch
 
-You can see the app in [Now](https://memeoftheday.now.sh/) or install it in any webserver:
+You can see the app in [Vercel](https://meme-of-the-day-react.vercel.app/) or install it in any webserver:
 
 1. Clone the repository:
 
