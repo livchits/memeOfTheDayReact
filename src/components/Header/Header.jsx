@@ -6,7 +6,10 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 function Header() {
   return (
     <header>
-      <a href="https://github.com/livchits/memeOfTheDay">
+      <a
+        aria-label="Link to GitHub repository"
+        href="https://github.com/livchits/memeOfTheDay"
+      >
         <FontAwesomeIcon icon={faGithubSquare} size="3x" />
       </a>
     </header>
