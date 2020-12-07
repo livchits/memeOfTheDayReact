@@ -1,4 +1,4 @@
-# The Meme of The Day
+# The Meme of The Day - A React app
 
 It is a simple React app that shows a different meme every day of the month and a random meme when the correspondent button is clicked.
 
