@@ -8,7 +8,7 @@ function Header() {
     <header>
       <a
         aria-label="Link to GitHub repository"
-        href="https://github.com/livchits/memeOfTheDay"
+        href="https://github.com/livchits/memeOfTheDayReact"
       >
         <FontAwesomeIcon icon={faGithubSquare} size="3x" />
       </a>
