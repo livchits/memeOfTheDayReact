@@ -1,27 +1,17 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import processMemesData from '../../memes/processMemesData';
+import useMemes from '../../memes/useMemes';
 import MemeInfo from '../MemeInfo/MemeInfo';
 import Title from '../Title/Title';
 import ChangeMemeButton from '../ChangeMemeButton/ChangeMemeButton';
-import { getMemeOfTheDay, getRandomMeme } from '../../utils';
+import { getRandomMeme } from '../../utils';
 import './Meme.css';
 
 function Meme() {
-  const [memesData, setMemesData] = useState([]);
   const [isRandomMeme, setIsRandomMeme] = useState(false);
-  const [actualMeme, setActualMeme] = useState(null);
 
-  useEffect(() => {
-    const getMemesData = async () => {
-      const memes = await processMemesData();
-      setMemesData(memes);
-      const { name, url } = getMemeOfTheDay(memes);
-      setActualMeme({ name, url });
-    };
-    getMemesData();
-  }, []);
+  const [memesData, actualMeme, setActualMeme] = useMemes();
 
   const changeMeme = () => {
     const randomMeme = getRandomMeme(memesData);
