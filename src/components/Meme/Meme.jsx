@@ -6,6 +6,7 @@ import MemeInfo from '../MemeInfo/MemeInfo';
 import Title from '../Title/Title';
 import ChangeMemeButton from '../ChangeMemeButton/ChangeMemeButton';
 import { getRandomMeme } from '../../utils';
+
 import './Meme.css';
 
 function Meme() {
@@ -22,8 +23,10 @@ function Meme() {
   return (
     <main className="container">
       <Title isRandomMeme={isRandomMeme} />
-      {actualMeme && (
+      {actualMeme ? (
         <MemeInfo imageUrl={actualMeme.url} name={actualMeme.name} />
+      ) : (
+        <div className="meme-text">Loading memes...</div>
       )}
       <ChangeMemeButton handleClick={changeMeme} />
     </main>

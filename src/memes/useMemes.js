@@ -13,7 +13,9 @@ function useMemes() {
       const memes = await processMemesData();
       setMemesData(memes);
       const { name, url } = getMemeOfTheDay(memes);
-      setActualMeme({ name, url });
+      setTimeout(() => {
+        setActualMeme({ name, url });
+      }, 500);
     };
     getMemesData();
   }, []);
