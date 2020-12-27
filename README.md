@@ -57,4 +57,4 @@ The button styles were taken from [Kocsten](https://codepen.io/kocsten).
 - [x] Accessibility improvements
 - [ ] Add transitions between random memes
 - [ ] Manage errors from API
-- [ ] Show a loading component while getting memes
+- [x] Show a loading component while getting memes
