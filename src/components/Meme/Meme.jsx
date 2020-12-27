@@ -1,24 +1,14 @@
 import * as React from 'react';
-import { useState } from 'react';
 
 import useMemes from '../../memes/useMemes';
 import MemeInfo from '../MemeInfo/MemeInfo';
 import Title from '../Title/Title';
 import ChangeMemeButton from '../ChangeMemeButton/ChangeMemeButton';
-import { getRandomMeme } from '../../utils';
 
 import './Meme.css';
 
 function Meme() {
-  const [isRandomMeme, setIsRandomMeme] = useState(false);
-
-  const [memesData, actualMeme, setActualMeme] = useMemes();
-
-  const changeMeme = () => {
-    const randomMeme = getRandomMeme(memesData);
-    setActualMeme(randomMeme);
-    setIsRandomMeme(true);
-  };
+  const [isRandomMeme, actualMeme, changeMeme] = useMemes();
 
   return (
     <main className="container">

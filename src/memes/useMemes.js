@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react';
 
-import { getMemeOfTheDay } from '../utils';
+import { getMemeOfTheDay, getRandomMeme } from '../utils';
 
 import processMemesData from './processMemesData';
 
 function useMemes() {
   const [memesData, setMemesData] = useState([]);
   const [actualMeme, setActualMeme] = useState(null);
+  const [isRandomMeme, setIsRandomMeme] = useState(false);
+
+  const changeMeme = () => {
+    const randomMeme = getRandomMeme(memesData);
+    setActualMeme(randomMeme);
+    setIsRandomMeme(true);
+  };
 
   useEffect(() => {
     const getMemesData = async () => {
@@ -20,7 +27,7 @@ function useMemes() {
     getMemesData();
   }, []);
 
-  return [memesData, actualMeme, setActualMeme];
+  return [isRandomMeme, actualMeme, changeMeme];
 }
 
 export default useMemes;
